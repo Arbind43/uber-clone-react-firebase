@@ -1,0 +1,17 @@
+{
+"rules": {
+".read": "auth != null",
+".write": "auth != null",
+"drivers": {
+"$driverId": {
+".write": "auth != null && auth.uid == $driverId"
+}
+},
+"rides": {
+"$rideId": {
+".read": "auth != null",
+".write": "auth != null"
+}
+}
+}
+}
